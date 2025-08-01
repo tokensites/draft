@@ -160,8 +160,8 @@
         <p class="text-[30px] lg:text-[32px] leading-[32px] text-gray-300">NOT FINANCIAL ADVICE, JUST VIBES</p>
       </div>
 
-      <div class="flex justify-center">
-        <div class="grid md:grid-cols-2 gap-4 lg:gap-8 mb-4 lg:mb-8 w-[720px] lg:w-full">
+      <div class="flex justify-center mb-8">
+        <div class="flex flex-wrap gap-4 w-[720px] lg:w-full justify-center">
           <div
             class="p-4 rounded-lg border-[7px] lg:border-[10px] border-[#4097EE] text-center text-[24px] lg:text-[44px]">
             UTILITIES = none
@@ -178,19 +178,16 @@
             class="p-4 rounded-lg border-[7px] lg:border-[10px] border-[#4097EE] text-center text-[24px] lg:text-[44px]">
             Energy = nuclear
           </div>
-        </div>
-      </div>
-
-      <div class="flex justify-center mb-8">
-        <div
-          class="w-full md:w-auto p-4 rounded-lg border-[7px] lg:border-[10px] border-[#4097EE] text-center text-[24px] lg:text-[44px]">
-          Community = unhinged
+          <div
+            class="p-4 rounded-lg border-[7px] lg:border-[10px] border-[#4097EE] text-center text-[24px] lg:text-[44px]">
+            Community = unhinged
+          </div>
         </div>
       </div>
 
       <div class="w-full flex justify-center">
         <a href="https://app.uniswap.org/swap?chain=mainnet&inputCurrency=NATIVE&outputCurrency=0x404d3295c8b1c61662068db584125a7ebcc0d651"
-          class="px-6 py-4 bg-[#4097EE] text-white rounded-lg text-center text-[30px] lg:text-[37px] hover:scale-105 transition-transform duration-300"
+          class="px-6 py-4 bg-[#4097EE] text-white rounded-lg text-center text-[30px] lg:text-[37px] leading-[32px] lg:leading-[39px] hover:scale-105 transition-transform duration-300"
           target="_blank" rel="noopener">
           YOU NEED THIS IN YOUR WALLET
         </a>
@@ -199,26 +196,106 @@
   </section>
 
   <!-- Partners/Listings Section -->
-  <!-- <section class="py-16 bg-dark-bg">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex flex-wrap justify-center items-center gap-8 opacity-70">
-        <img src="./assets/images/latest-bw_coingecko_logo_with_dark_text-01-1.png" alt="CoinGecko"
-          class="h-12 hover:opacity-100 transition-opacity duration-300" width="296" height="79" loading="lazy">
-        <img src="./assets/images/cmc.png" alt="CoinMarketCap" class="h-12 hover:opacity-100 transition-opacity duration-300"
-          width="371" height="79" loading="lazy">
-        <a href="https://www.dextools.io/app/en/ether/pair-explorer/0xeead662a16c68fe58c2278c63201f2c739ee3317?t=1747909229523"
-          target="_blank" rel="noopener">
-          <img src="./assets/images/Untitled-1_0004_Layer-1-copy.png" alt="DexTools"
-            class="h-12 hover:opacity-100 transition-opacity duration-300" width="279" height="113" loading="lazy">
-        </a>
-        <a href="https://dexscreener.com/ethereum/0xeead662a16c68fe58c2278c63201f2c739ee3317" target="_blank"
-          rel="noopener">
-          <img src="./assets/images/dexscreener-1.png" alt="DexScreener"
-            class="h-12 hover:opacity-100 transition-opacity duration-300" width="362" height="61" loading="lazy">
-        </a>
+  <section class="py-12 bg-[#095EB2]">
+    <div class="mx-auto px-4">
+      <div class="relative overflow-hidden">
+        <!-- Logo Carousel Container -->
+        <div id="logo-carousel"
+          class="flex gap-8 items-center justify-center">
+          <!-- CoinGecko -->
+          <div class="flex-shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <img src="./assets/images/latest-bw_coingecko_logo_with_dark_text-01-1.png" alt="CoinGecko" width="362"
+              height="113" loading="lazy" class="w-[200px] md:w-[362px] h-auto">
+          </div>
+
+          <!-- CoinMarketCap -->
+          <div class="flex-shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <img src="./assets/images/cmc.png" alt="CoinMarketCap" width="362" height="113" loading="lazy"
+              class="w-[200px] md:w-[362px] h-auto">
+          </div>
+
+          <!-- Platform Logo 1 -->
+          <div class="flex-shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <img src="./assets/images/Untitled-1_0005_Layer-1.png" alt="Platform" width="362" height="113"
+              loading="lazy" class="w-[200px] md:w-[362px] h-auto">
+          </div>
+
+          <!-- DexTools (with link) -->
+          <a href="https://www.dextools.io/app/en/ether/pair-explorer/0xeead662a16c68fe58c2278c63201f2c739ee3317?t=1747909229523"
+            target="_blank" rel="noopener"
+            class="flex-shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <img src="./assets/images/Untitled-1_0004_Layer-1-copy.png" alt="DexTools" width="362" height="113"
+              loading="lazy" class="w-[200px] md:w-[362px] h-auto">
+          </a>
+
+          <!-- Platform Logo 2 -->
+          <div class="flex-shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <img src="./assets/images/Untitled-1_0003_Layer-1-copy-2.png" alt="Platform" width="362" height="113"
+              loading="lazy" class="w-[200px] md:w-[362px] h-auto">
+          </div>
+        </div>
       </div>
     </div>
-  </section> -->
+
+    <!-- Carousel JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const carousel = document.getElementById('logo-carousel');
+        const autoplayInterval = 2500; // 0.5 seconds
+        let isPaused = false;
+        let currentIndex = 0;
+        
+        // Clone all items to create seamless loop
+        const items = Array.from(carousel.children);
+        const itemCount = items.length;
+        
+        // Clone each item and append to create continuous flow
+        items.forEach(item => {
+          const clone = item.cloneNode(true);
+          carousel.appendChild(clone);
+        });
+        
+        // Calculate item width including gap
+        const itemWidth = 240; // 200px image + 40px gap (gap-8 + some margin)
+        
+        function moveToNextItem() {
+          if (!isPaused) {
+            currentIndex++;
+            const translateX = -(currentIndex * itemWidth);
+            carousel.style.transform = `translateX(${translateX}px)`;
+            
+            // Reset to beginning when we've shown all original items
+            if (currentIndex >= itemCount) {
+              currentIndex = 0;
+              // Use setTimeout to reset without animation after current animation
+              setTimeout(() => {
+                carousel.style.transition = 'none';
+                carousel.style.transform = `translateX(0px)`;
+                setTimeout(() => {
+                  carousel.style.transition = 'transform 0.3s ease-in-out';
+                }, 50);
+              }, 300);
+            }
+          }
+        }
+        
+        // Add smooth transition
+        carousel.style.transition = 'transform 0.3s ease-in-out';
+        
+        // Start the carousel
+        const autoplay = setInterval(moveToNextItem, autoplayInterval);
+
+        // Pause on hover
+        carousel.addEventListener('mouseenter', function () {
+          isPaused = true;
+        });
+
+        carousel.addEventListener('mouseleave', function () {
+          isPaused = false;
+        });
+      });
+    </script>
+  </section>
 
   <!-- Sacred Monkey Scroll Section -->
   <section class="py-20 bg-gradient-to-r from-[#085EB2] to-[#0080FE] bg-opacity-0 flex justify-center">
@@ -257,6 +334,59 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- Contract Address & Platform Links Section -->
+  <section class="py-16 bg-[#19131F]">
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- Contract Address Display -->
+      <div class="mb-12">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6 p-6 bg-white rounded-2xl">
+          <h2 class="text-xl md:text-2xl lg:text-3xl text-black break-all text-center md:text-left">
+            0x404d3295c8b1c61662068db584125a7Ebcc0d651
+          </h2>
+          <button id="copy-address"
+            class="px-6 py-3 bg-black text-white rounded-lg font-bold text-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 whitespace-nowrap">
+            COPY
+          </button>
+        </div>
+      </div>
+
+      <!-- Platform Links -->
+      <div class="flex flex-wrap justify-center items-center gap-8">
+        <a href="https://www.dextools.io/app/en/ether/pair-explorer/0xeead662a16c68fe58c2278c63201f2c739ee3317?t=1747909229523"
+          target="_blank" rel="noopener"
+          class="hover:opacity-100 transition-opacity duration-300 bg-[#0173E3] px-10 py-4">
+          <img src="./assets/images/Untitled-1_0004_Layer-1-copy.png" alt="DexTools" class="" width="362" height="113"
+            loading="lazy">
+        </a>
+        <a href="https://dexscreener.com/ethereum/0xeead662a16c68fe58c2278c63201f2c739ee3317" target="_blank"
+          rel="noopener" class="hover:opacity-100 transition-opacity duration-300 bg-[#0173E3] px-10 py-4">
+          <img src="./assets/images/dexscreener-1.png" alt="DexScreener" class="" width="362" height="113"
+            loading="lazy">
+        </a>
+      </div>
+    </div>
+
+    <!-- Copy to Clipboard JavaScript -->
+    <script>
+      document.getElementById('copy-address').addEventListener('click', function () {
+        const address = '0x404d3295c8b1c61662068db584125a7Ebcc0d651';
+        navigator.clipboard.writeText(address).then(function () {
+          // Change button text temporarily
+          const button = document.getElementById('copy-address');
+          const originalText = button.textContent;
+          button.textContent = 'COPIED!';
+
+          setTimeout(function () {
+            button.textContent = originalText;
+          }, 2000);
+        }, function (err) {
+          console.error('Failed to copy: ', err);
+          alert('Failed to copy address. Please copy manually.');
+        });
+      });
+    </script>
   </section>
 
   <!-- Legend Stories Section -->
@@ -328,17 +458,17 @@
       <h2 class="mb-8 lg:mb-16 text-4xl lg:text-[77px]">THE $MAMBO BIBLE</h2>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 p-8 md:px-16 md:py-12 bg-white rounded-2xl">
         <img src=" ./assets/images/uvaue33m.png" alt="Platform 1"
-          class="mx-auto hover:opacity-100 transition-opacity duration-300" width="289" height="83" loading="lazy">
+          class="mx-auto hover:opacity-100 transition-opacity duration-300" width="301" height="118" loading="lazy">
         <img src="./assets/images/Mask-Group-19.png" alt="Platform 2"
-          class="mx-auto hover:opacity-100 transition-opacity duration-300" width="203" height="91" loading="lazy">
+          class="mx-auto hover:opacity-100 transition-opacity duration-300" width="301" height="118" loading="lazy">
         <img src="./assets/images/Mask-Group-16.png" alt="Platform 3"
-          class="mx-auto hover:opacity-100 transition-opacity duration-300" width="301" height="100" loading="lazy">
+          class="mx-auto hover:opacity-100 transition-opacity duration-300" width="301" height="118" loading="lazy">
         <img src="./assets/images/Mask-Group-17.png" alt="Platform 4"
-          class="mx-auto hover:opacity-100 transition-opacity duration-300" width="301" height="100" loading="lazy">
+          class="mx-auto hover:opacity-100 transition-opacity duration-300" width="301" height="118" loading="lazy">
         <img src="./assets/images/murw0wxb.png" alt="Platform 5"
-          class="mx-auto hover:opacity-100 transition-opacity duration-300" width="289" height="83" loading="lazy">
+          class="mx-auto hover:opacity-100 transition-opacity duration-300" width="301" height="118" loading="lazy">
         <img src="./assets/images/Mask-Group-18.png" alt="Platform 6"
-          class="mx-auto hover:opacity-100 transition-opacity duration-300" width="244" height="118" loading="lazy">
+          class="mx-auto hover:opacity-100 transition-opacity duration-300" width="301" height="118" loading="lazy">
       </div>
     </div>
   </section>
