@@ -10,10 +10,28 @@
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'cubano': ['Cubano', 'system-ui', '-apple-system', 'sans-serif'],
+            'sans': ['Cubano', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
 
   <!-- Custom CSS for animations and exact styling match -->
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    @font-face {
+      font-family: 'Cubano';
+      src: url('./assets/fonts/Cubano.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
 
     * {
       margin: 0;
@@ -22,11 +40,27 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Cubano', system-ui, -apple-system, sans-serif;
       background: #000000;
       color: #ffffff;
       line-height: 1.4;
       font-size: 14px;
+    }
+
+    /* Ensure all text elements use Cubano font */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    span,
+    div,
+    button,
+    input {
+      font-family: 'Cubano', system-ui, -apple-system, sans-serif;
     }
 
     .floating {
@@ -64,7 +98,7 @@
     <!-- Main Hero Content -->
     <div class="relative z-10 text-center px-4 h-full mt-10">
       <!-- Main Title -->
-      <h1 class="text-5xl md:text-7xl lg:text-[140px] xl:text-[170px] font-black mb-6 pulse-animation">
+      <h1 class="text-5xl md:text-7xl lg:text-[140px] xl:text-[170px] mb-6 pulse-animation">
         $MAMBO
       </h1>
 
@@ -75,7 +109,7 @@
       </div>
 
       <!-- Subtitle -->
-      <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8 md:mb-16">
+      <h2 class="text-2xl md:text-4xl lg:text-5xl leading-tight mb-8 md:mb-16">
         BACKED BY 100% PURE UNHINGED<br>
         <span>$MAMBO ENERGY</span>
       </h2>
@@ -86,23 +120,23 @@
       <div class="max-w-8xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
         <div class="flex gap-4 md:gap-2 lg:gap-4 items-center">
           <a href="https://app.uniswap.org/swap?chain=mainnet&inputCurrency=NATIVE&outputCurrency=0x404d3295c8b1c61662068db584125a7ebcc0d651"
-            class="px-4 lg:px-6 py-3 md:py-2 bg-black text-white rounded-lg text-center text-[25px] lg:text-[44px] leading-[30px] lg:leading-[50px] font-bold hover-glow transition-all duration-300 transform hover:scale-105 md:max-w-[150px] lg:max-w-[240px]"
+            class="px-4 lg:px-6 py-3 md:py-2 bg-black text-white rounded-lg text-center text-[25px] lg:text-[44px] leading-[30px] lg:leading-[50px] hover-glow transition-all duration-300 transform hover:scale-105 md:max-w-[150px] lg:max-w-[240px]"
             target="_blank" rel="noopener">
             BUY $MAMBO
           </a>
           <a href="https://app.uniswap.org/swap?chain=mainnet&inputCurrency=NATIVE&outputCurrency=0x404d3295c8b1c61662068db584125a7ebcc0d651"
-            class="w-[54px] h-[54px] md:w-[46px] md:h-[46px] lg:w-[66px] lg:h-[66px] px-6 lg:px-4 py-2 bg-black rounded-lg bg-[url('./assets/images/82a878529e8c18e62a59851f834b3f57.png')] bg-cover bg-center bg-no-repeat text-[27px] lg:text-[50px] leading-[30px] lg:leading-[50px] font-bold hover-glow transition-all duration-300 transform hover:scale-105"
+            class="w-[54px] h-[54px] md:w-[46px] md:h-[46px] lg:w-[66px] lg:h-[66px] px-6 lg:px-4 py-2 bg-black rounded-lg bg-[url('./assets/images/82a878529e8c18e62a59851f834b3f57.png')] bg-cover bg-center bg-no-repeat text-[27px] lg:text-[50px] leading-[30px] lg:leading-[50px] hover-glow transition-all duration-300 transform hover:scale-105"
             target="_blank" rel="noopener" title="Follow us on X">
           </a>
         </div>
         <div class="flex flex-col md:flex-row gap-3 lg:gap-4 items-center w-full md:w-auto">
           <a href="http://x.com/mamboeth"
-            class="w-full md:w-auto px-6 lg:px-4 py-2 bg-black rounded-lg text-center text-[27px] lg:text-[50px] leading-[30px] lg:leading-[50px] font-bold hover-glow transition-all duration-300 transform hover:scale-105"
+            class="w-full md:w-auto px-6 lg:px-4 py-2 bg-black rounded-lg text-center text-[27px] lg:text-[50px] leading-[30px] lg:leading-[50px] hover-glow transition-all duration-300 transform hover:scale-105"
             target="_blank" rel="noopener" title="Follow us on X">
             X
           </a>
           <a href="http://t.me/mamboeth"
-            class="w-full md:w-auto px-6 lg:px-4 py-2 bg-black rounded-lg text-center text-[27px] lg:text-[50px] leading-[30px] lg:leading-[50px] font-bold hover-glow transition-all duration-300 transform hover:scale-105"
+            class="w-full md:w-auto px-6 lg:px-4 py-2 bg-black rounded-lg text-center text-[27px] lg:text-[50px] leading-[30px] lg:leading-[50px] hover-glow transition-all duration-300 transform hover:scale-105"
             target="_blank" rel="noopener" title="Join our Telegram">
             tG
           </a>
@@ -122,7 +156,7 @@
   <section class="py-20 bg-[#19131F]">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-8 lg:mb-16">
-        <h2 class="mb-2 text-4xl lg:text-6xl font-bold">Why $MAMBO?</h2>
+        <h2 class="mb-2 text-4xl lg:text-6xl">Why $MAMBO?</h2>
         <p class="text-[30px] lg:text-[32px] leading-[32px] text-gray-300">NOT FINANCIAL ADVICE, JUST VIBES</p>
       </div>
 
@@ -156,7 +190,7 @@
 
       <div class="w-full flex justify-center">
         <a href="https://app.uniswap.org/swap?chain=mainnet&inputCurrency=NATIVE&outputCurrency=0x404d3295c8b1c61662068db584125a7ebcc0d651"
-          class="px-6 py-4 bg-[#4097EE] text-white rounded-lg text-center text-[30px] lg:text-[37px] font-bold hover:scale-105 transition-transform duration-300"
+          class="px-6 py-4 bg-[#4097EE] text-white rounded-lg text-center text-[30px] lg:text-[37px] hover:scale-105 transition-transform duration-300"
           target="_blank" rel="noopener">
           YOU NEED THIS IN YOUR WALLET
         </a>
@@ -191,28 +225,25 @@
     <div class="mx-auto px-6">
       <div class="flex flex-col-reverse md:flex-row gap-12 items-center">
         <div class="w-full md:w-auto">
-          <h2 class="mb-8 text-[42px] lg:text-[62px] text-center leading-[44px] lg:leading-[64px] font-black">
+          <h2 class="mb-8 text-[42px] lg:text-[62px] text-center leading-[44px] lg:leading-[64px]">
             THE SACRED<br>MONKEY SCROLL
           </h2>
 
           <div class="flex flex-col gap-4">
             <div class="p-6 bg-[#19131F] rounded-xl text-center">
-              <h3
-                class="text-[30px] md:text-[40px] lg:text-[50px] leading-[32px] md:leading-[42px] lg:leading-[52px] font-bold">
+              <h3 class="text-[30px] md:text-[40px] lg:text-[50px] leading-[32px] md:leading-[42px] lg:leading-[52px]">
                 SUPPLY</h3>
               <p class="text-[20px] md:text-[30px] lg:text-[38px] leading-[22px] md:leading-[32px] lg:leading-[40px]">1
                 trillion</p>
             </div>
             <div class="p-6 bg-[#19131F] rounded-xl text-center">
-              <h3
-                class="text-[30px] md:text-[40px] lg:text-[50px] leading-[32px] md:leading-[42px] lg:leading-[52px] font-bold">
+              <h3 class="text-[30px] md:text-[40px] lg:text-[50px] leading-[32px] md:leading-[42px] lg:leading-[52px]">
                 TAX</h3>
               <p class="text-[20px] md:text-[30px] lg:text-[38px] leading-[22px] md:leading-[32px] lg:leading-[40px]">0%
                 in 0% out, 100% insanity</p>
             </div>
             <div class="p-6 bg-[#19131F] rounded-xl text-center">
-              <h3
-                class="text-[30px] md:text-[40px] lg:text-[50px] leading-[32px] md:leading-[42px] lg:leading-[52px] font-bold">
+              <h3 class="text-[30px] md:text-[40px] lg:text-[50px] leading-[32px] md:leading-[42px] lg:leading-[52px]">
                 LIQUIDITY</h3>
               <p class="text-[20px] md:text-[30px] lg:text-[38px] leading-[22px] md:leading-[32px] lg:leading-[40px]">
                 TIGHTER THAN $MAMBO's GRIP</p>
@@ -362,7 +393,7 @@
         </div>
 
         <div class="text-center md:text-left">
-          <h2 class="mb-8 text-4xl lg:text-6xl leading-tight font-black">
+          <h2 class="mb-8 text-4xl lg:text-6xl leading-tight">
             This isn't a token<br>
             This isn't a meme<br>
             This isn't a cult<br>
@@ -371,12 +402,12 @@
 
           <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a href="http://x.com/mamboeth"
-              class="px-6 lg:py-3 bg-black rounded-lg text-[30px] lg:text-4xl font-bold hover-glow transition-all duration-300"
+              class="px-6 lg:py-3 bg-black rounded-lg text-[30px] lg:text-4xl hover-glow transition-all duration-300"
               target="_blank" rel="noopener">
               X
             </a>
             <a href="http://t.me/mamboeth"
-              class="px-6 lg:py-3 bg-black rounded-lg text-[30px] lg:text-4xl font-bold hover-glow transition-all duration-300"
+              class="px-6 lg:py-3 bg-black rounded-lg text-[30px] lg:text-4xl hover-glow transition-all duration-300"
               target="_blank" rel="noopener">
               tG
             </a>
@@ -390,7 +421,7 @@
   <footer class="bg-dark-bg text-center">
     <div class="max-w-4xl mx-auto px-4">
       <a href="https://app.uniswap.org/swap?chain=mainnet&inputCurrency=NATIVE&outputCurrency=0x404d3295c8b1c61662068db584125a7ebcc0d651"
-        class="inline-block px-8 py-4 text-white rounded-lg text-2xl md:text-3xl font-bold hover-glow transition-all duration-300 transform hover:scale-105"
+        class="inline-block px-8 py-4 text-white rounded-lg text-2xl md:text-3xl hover-glow transition-all duration-300 transform hover:scale-105"
         target="_blank" rel="noopener">
         Go buy $MAMBO now!
       </a>
